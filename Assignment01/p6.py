@@ -6,9 +6,7 @@ days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 def leap_year(year):
     if year % 400 == 0:
         return True
-    if year % 100 == 0:
-        return False
-    if year % 4 == 0:
+    if year % 4 == 0 and year % 100 != 0:
         return True
     return False
 
@@ -25,7 +23,7 @@ months = ["January", "February", "March", "April", "May", "June",
           "July", "August", "September", "October", "November", "December"]
 
 def ordinal(day):
-    if 10 < day % 100 < 14:
+    if 10 <= day % 100 <= 20:
         return str(day) + "th"
 
     if day % 10 == 1:

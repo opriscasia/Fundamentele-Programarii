@@ -1,6 +1,5 @@
 import math
 
-
 n=int(input("Enter a number n: "))
 m=n+1
 

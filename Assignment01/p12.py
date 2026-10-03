@@ -13,6 +13,7 @@ def leap_year(year):
 
 days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+#Adding a day for each leap year
 for year1 in range(year,2026):
     if leap_year(year1):
         age=age+1
@@ -22,15 +23,15 @@ age = age + (2026-year) * 365
 for month1 in range(month-1,9):
     age = age + days[month1]
 
-if month >= 10:
+if month > 9:
     for month1 in range(10,month):
         age = age - days[month1]
 
-#daca per
+#if the person is born after february in a leap year, we subtract a day
 if leap_year(year) and month >= 3:
     age= age - 1
 
-age = age + 2 - day
+age = age + 6 - day
 
-# The age of a person in number of days up to october 2nd 2026
+# The age of a person in number of days up to october 6th 2026
 print("Your age is \033[1;35m" + str(age) + "\033[0m days")
